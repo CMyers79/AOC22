@@ -23,7 +23,8 @@ with open('input.txt') as file:
                     a += int(o[i][1])
                 else:
                     if o[i][1] == 'old':
-                        a **= 2
+                        if a % 9699690 != 0:
+                            a **= 2
                     else:
                         a *= int(o[i][1])
 
