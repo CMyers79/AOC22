@@ -15,9 +15,7 @@ for line in s:
         else:
             t += int(l[i]) * 5 ** b
         b += 1
-    tot += t  # base 10
-
-print(tot)
+    tot += t
 
 ts = ''
 for p in range(m + 2, -1, -1):
@@ -26,8 +24,6 @@ for p in range(m + 2, -1, -1):
         tot %= 5 ** p
     else:
         ts = ts + '0'
-
-print(ts)  # base 5, leading 0s
 
 c = 0
 f = ''
@@ -45,4 +41,4 @@ for d in range(len(ts) - 1, -1, -1):
         f = str(int(ts[d]) + c) + f
         c = 0
 
-print(f)  # SNAFU
+print(f)
